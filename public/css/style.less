@@ -1,0 +1,56 @@
+
+@nav-height: 40px;
+@left-weight: 200px;
+@nav-background: #ffffff;
+@left-bg: #00B7FF;
+@right-bg: #dddddd;
+
+body {
+    padding: 0;
+    margin: 0;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.main {
+
+}
+
+#mask {
+
+}
+.blur {
+    -webkit-filter: blur(2px); /* Chrome, Opera */
+    -moz-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=2, MakeShadow=false); /* IE6~IE9 */
+}
+
+
+.nav {
+    height: @nav-height;
+    line-height: @nav-height;
+    font-size: @nav-height / 2;
+    padding-left: @nav-height / 2;
+}
+
+.content {
+    top: @nav-height;
+    .left {
+        width: @left-weight;
+        background: @left-bg;
+        right: auto;
+    }
+    .right {
+        left: @left-weight;
+        background: @right-bg;
+    }
+}
